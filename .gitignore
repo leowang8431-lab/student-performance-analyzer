@@ -1,0 +1,19 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.zip
+# Only the explicit synthetic demo is shareable by default.
+data/*
+!data/demo_students.csv
+!data/DATA_CARD.md
+# Generated reports may expose private information.
+results/

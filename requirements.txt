@@ -1,0 +1,4 @@
+# Direct dependencies: compatibility ranges, not a full lock file.
+# Actual tested versions are recorded in docs/TEST_RESULTS.txt.
+pandas>=2.2.3,<4
+matplotlib>=3.10,<4

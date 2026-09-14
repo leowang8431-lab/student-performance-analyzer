@@ -1,0 +1,37 @@
+Student Performance Analyzer v0.1 - test record
+Executed during package preparation on 2026-09-14.
+Platform: Linux x86_64
+Python: 3.13.5
+pandas: 2.2.3
+numpy: 2.3.5
+matplotlib: 3.10.8
+
+15 automated tests passed.
+The CLI also ran successfully against the 24-row synthetic demo.
+examples/report.md and examples/study_hours.png are actual run outputs.
+The PNG was visually inspected for labels and layout.
+No test has been run on the user's Windows computer.
+No GitHub repository was created or modified.
+Only these installed dependency versions have been tested here;
+requirements.txt contains compatibility ranges, not a complete lock file.
+
+test_bad_numeric_values_rejected (test_analyzer.AnalyzerTests.test_bad_numeric_values_rejected) ... ok
+test_cli_missing_file_returns_error (test_analyzer.AnalyzerTests.test_cli_missing_file_returns_error) ... ok
+test_constant_factor_is_undefined (test_analyzer.AnalyzerTests.test_constant_factor_is_undefined) ... ok
+test_constant_scores_are_undefined (test_analyzer.AnalyzerTests.test_constant_scores_are_undefined) ... ok
+test_csv_roundtrip_preserves_leading_zero_ids (test_analyzer.AnalyzerTests.test_csv_roundtrip_preserves_leading_zero_ids) ... ok
+test_duplicate_and_empty_identifiers_rejected (test_analyzer.AnalyzerTests.test_duplicate_and_empty_identifiers_rejected) ... ok
+test_empty_frame_rejected (test_analyzer.AnalyzerTests.test_empty_frame_rejected) ... ok
+test_known_summary_and_sample_ddof (test_analyzer.AnalyzerTests.test_known_summary_and_sample_ddof) ... ok
+test_missing_and_empty_csv_rejected (test_analyzer.AnalyzerTests.test_missing_and_empty_csv_rejected) ... ok
+test_missing_column_rejected (test_analyzer.AnalyzerTests.test_missing_column_rejected) ... ok
+test_positive_and_negative_correlations (test_analyzer.AnalyzerTests.test_positive_and_negative_correlations) ... ok
+test_report_discloses_limitations (test_analyzer.AnalyzerTests.test_report_discloses_limitations) ... ok
+test_single_row (test_analyzer.AnalyzerTests.test_single_row) ... ok
+test_threshold_validation_and_custom_threshold (test_analyzer.AnalyzerTests.test_threshold_validation_and_custom_threshold) ... ok
+test_validation_does_not_mutate_input (test_analyzer.AnalyzerTests.test_validation_does_not_mutate_input) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.101s
+
+OK
