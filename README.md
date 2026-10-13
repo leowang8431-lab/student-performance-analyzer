@@ -1,12 +1,48 @@
 # Student Performance Analyzer
 
-An AI-assisted Python learning starter that validates a CSV, calculates descriptive
-statistics, explores linear associations and writes a report and scatter plot.
+# Student Performance Analyzer
 
-**v0.1: a runnable starter, not a finished research study or prediction system.**
-**All 24 bundled records are synthetic, not real student information.**
+A Python-based student performance analysis tool that validates CSV datasets, calculates descriptive statistics, explores linear correlations, and generates reports and visualizations.
 
-中文分步说明：[START_HERE_zh.md](START_HERE_zh.md)
+**Version:** v0.1 | **Language:** Python | **Status:** Runnable learning project
+
+> Developed with AI assistance and verified through automated tests and a successful demo run. This is not a prediction system or a completed research study.
+
+## Project Highlights
+
+- **Data Validation:** Check required columns, duplicate IDs, missing values, and numeric ranges.
+- **Statistical Analysis:** Calculate mean, median, minimum, maximum, sample variance, standard deviation, and pass rate.
+- **Correlation Analysis:** Explore Pearson correlations between study-related variables and exam scores.
+- **Data Visualization:** Generate a scatter plot of study hours and exam scores.
+- **Automated Testing:** 15 tests and 14 subtests passed in the verified development environment.
+- **Privacy Awareness:** Use synthetic demo data and exclude private input datasets from version control by default.
+
+## Example Visualization
+
+![Study Hours vs Exam Score](examples/study_hours.png)
+
+*Scatter plot generated from 24 synthetic student records. Correlation does not imply causation.*
+
+## Example Analysis Results
+
+The bundled synthetic dataset produced the following results:
+
+| Metric | Result |
+|---|---:|
+| Validated records | 24 |
+| Mean exam score | 70.67 |
+| Median exam score | 71.50 |
+| Sample standard deviation | 12.72 |
+| Pass rate (60/100 threshold) | 79.17% |
+| Study hours vs exam score (Pearson r) | 0.824 |
+
+These results are illustrative and should not be interpreted as findings about real students.
+
+[View Sample Report](examples/report.md) | [Chinese Getting Started Guide](START_HERE_zh.md)
+
+---
+
+
 
 ## Features
 
