@@ -58,26 +58,32 @@ def load_data(path: Path | str) -> pd.DataFrame:
     return validate_data(frame)
 
 
+
 def summarize(data: pd.DataFrame, pass_mark: float = 60.0) -> dict:
     """Summarize validated data. Sample variance/std use n - 1 (ddof=1)."""
     if not math.isfinite(pass_mark) or not 0 <= pass_mark <= 100:
         raise ValueError("pass_mark must be a finite number between 0 and 100.")
+
     scores = data["Exam_Score"]
     n = len(scores)
+
     if n == 0:
         raise ValueError("Cannot summarize an empty dataset.")
+
     return {
         "count": n,
         "mean": float(scores.mean()),
         "median": float(scores.median()),
         "minimum": float(scores.min()),
         "maximum": float(scores.max()),
+        "range": float(scores.max() - scores.min()),
         "sample_variance": float(scores.var(ddof=1)) if n > 1 else None,
         "sample_std": float(scores.std(ddof=1)) if n > 1 else None,
         "pass_mark": float(pass_mark),
         "pass_count": int((scores >= pass_mark).sum()),
         "pass_rate": float((scores >= pass_mark).mean()),
     }
+
 
 
 def correlations(data: pd.DataFrame) -> dict[str, float | None]:
@@ -102,8 +108,11 @@ def make_report(summary: dict, associations: dict, dataset_label: str) -> str:
     """Build an aggregate Markdown report without individual records."""
     n = summary["count"]
     metrics = [
-        ("Mean", summary["mean"]), ("Median", summary["median"]),
-        ("Minimum", summary["minimum"]), ("Maximum", summary["maximum"]),
+        ("Mean", summary["mean"]),
+        ("Median", summary["median"]),
+        ("Minimum", summary["minimum"]),
+        ("Maximum", summary["maximum"]),
+        ("Range", summary["range"]),
         ("Sample variance (ddof=1)", summary["sample_variance"]),
         ("Sample standard deviation (ddof=1)", summary["sample_std"]),
     ]
